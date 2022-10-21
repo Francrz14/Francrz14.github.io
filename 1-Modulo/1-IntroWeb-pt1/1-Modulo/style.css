@@ -1,0 +1,40 @@
+#mi-otro-h2{
+    color: brown;
+}
+#mi-otro{
+    color: blueviolet;
+}
+
+/* Estilos para el ejercicio CSS 8-ejercicioCSS*/
+/* div*/
+.container, body {
+    background-color: burlywood;
+}
+.container{
+    border: 2px solid brown;
+    background-color: aqua;
+}
+
+/*h2*/
+.h2 { 
+    color: brown;
+    font-size: 25px;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    letter-spacing: 5px;
+    text-decoration: underline;
+    padding: 10px;
+    }
+/*párrafos*/
+.para {
+    font-weight: 1900;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    padding: 10px;
+    text-decoration: underline;
+    font-size: 25px;
+    color: darkblue;
+    columns: 300px;
+    
+
+}

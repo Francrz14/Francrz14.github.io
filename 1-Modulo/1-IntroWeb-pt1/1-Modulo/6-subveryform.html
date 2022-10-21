@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body> 
+<h1 id="title">Encuesta de Prueba</h1>
+<p id="description">Esto es un formulario de ejemplo para practicar HTML.</p>
+
+<form id="survey-form">
+  
+<div>
+    <label for="name" id="name-label">Nombre:</label>
+    <input id="name" type="text" placeholder="Nombre Apellido" required>
+</div>
+  
+<div>
+    <label for="email" id="email-label">Tu email:</label>
+    <input id="email" type="email" placeholder="email@dominio.com" required>
+</div>
+
+<div>
+    <label id="number-label">Edad:</label>
+    <input id="number" type="number" min="1" max="200"
+    step="1"placeholder="37" requiered>
+</div>
+<br>
+<br>
+<!--dropdown o menu desplegable-->
+
+<label>Lenguaje de programación favorito:</label><br>
+<select id="dropdown">
+  <option>Javascript</option>
+  <option>Pythom</option>
+  <option disabled>Serpent</option>
+  <option>C</option>
+  <option>c++</option>
+</select>
+<br>
+<br>
+<!--Ratio buttons -->
+<label>¿Has usado VS Code alguna vez?</label><br>
+  <input type="radio" name="vs-code" value="si"><label>Sí</label><br>
+  <input type="radio" name="vs-code" value="no"><label>No</label><br>
+  <input type="radio" name="vs-code" value="otro"><label>No lo sé<label><br>
+<br>
+<br>
+ <!-- checkboxes -->
+ <label>¿Estas aprendiendo HTML?</label><br>
+ <input type="checkbox"
+ value="si"><label>Sí</label><br>
+ <input type="checkbox" value="no"><label>No</label><br>
+ <input type="checkbox" value="maybe"><label>Es posible.</label><br>
+<br>
+<br>
+ <!-- Textareas -->
+ <label>Comentarios</label>
+ <br>
+ <br>
+ <textarea id="textarea" name="pepito" rows="4" cols="50">deja comentarios....
+ </textarea>
+ <br>
+ <input type="submit" id="submit" value="Pon tu formulario">
+
+
+</form>
+
+<body>
+</html>
