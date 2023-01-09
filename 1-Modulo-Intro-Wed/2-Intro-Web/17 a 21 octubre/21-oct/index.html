@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex box</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abyssinica+SIL&family=Roboto:wght@300;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>Flex box</h1>
+
+    <section id="setup"><a href="#"></a>
+    <h2>Setup</h2>
+    <div class="flex-container">
+        <div class="flex-item">Mi div 1</div>
+        <div class="flex-item">Mi div 2</div>
+        <div class="flex-item">Mi div 3</div>
+        <div class="flex-item">Mi div 4</div>
+        <div class="flex-item">Mi div 5</div>
+    </div>
+    </section>
+
+    <section id="contenidos">
+    <h2>Contenidos</h2>
+    <ul>
+        <li><a href="horizontal.html"></a>Alineación Horizontal</li>
+        <li><a href="vertical.html"></a>Alineación Verical</li>
+        <li><a href="horizontal-vertical.html"></a>Alineación Horizontal y Vertical</li>
+        <li><a href="columnas.html"></a>link</li>
+        <li><a href="wrap.html"></a>Wrap</li>
+        <li><a href="order.html"></a>Order</li>
+        <li><a href="shrink-grow.html">Shrink y Grow</a></li>
+        <li><a href="#">Galería Responsibe</a>link</li>
+        <li><a href="#"></a>link</li>
+    </ul>
+    </section>
+
+    <section id="horizontal">
+    <h2>Alineación Horizontal</h2>
+    <h3>Flex-star</h3>
+    <div class="flex-start-container">
+        <div class="flex-item">Mi div 1</div>
+        <div class="flex-item">Mi div 2</div>
+        <div class="flex-item">Mi div 3</div>
+        <div class="flex-item">Mi div 4</div>
+        <div class="flex-item">Mi div 5</div>
+    </div>
+    <h3>center</h3>
+    <div class="center-container">
+        <div class="flex-item">Mi div 1</div>
+        <div class="flex-item">Mi div 2</div>
+        <div class="flex-item">Mi div 3</div>
+        <div class="flex-item">Mi div 4</div>
+        <div class="flex-item">Mi div 5</div>
+    </div>
+    <h3>flex-end</h3>
+    <div class="flex-end-container">
+        <div class="flex-item">Mi div 1</div>
+        <div class="flex-item">Mi div 2</div>
+        <div class="flex-item">Mi div 3</div>
+        <div class="flex-item">Mi div 4</div>
+        <div class="flex-item">Mi div 5</div>
+    </div>
+    </section>
+
+    <section id="vertical">
+    <h2>Alineación Vertical</h2>
+    <h3>Flex-star</h3>
+    <div class="v-flex-start-container">
+        <div class="flex-item">Mi div 1</div>
+        <div class="flex-item">Mi div 2</div>
+        <div class="flex-item">Mi div 3</div>
+        <div class="flex-item">Mi div 4</div>
+        <div class="flex-item">Mi div 5</div>
+    </div>
+    <h3>center</h3>
+    <div class="v-center-container">
+        <div class="flex-item">Mi div 1</div>
+        <div class="flex-item">Mi div 2</div>
+        <div class="flex-item">Mi div 3</div>
+        <div class="flex-item">Mi div 4</div>
+        <div class="flex-item">Mi div 5</div>
+    </div>
+    <h3>flex-end</h3>
+    <div class="v-flex-end-container">
+        <div class="flex-item">Mi div 1</div>
+        <div class="flex-item">Mi div 2</div>
+        <div class="flex-item">Mi div 3</div>
+        <div class="flex-item">Mi div 4</div>
+        <div class="flex-item">Mi div 5</div>
+    </div>
+    </section>
+
+    <section id="horizontal-vertical">
+    <h2>Alineación Horizontal y Vertical</h2>
+    <h3>flex-start y center</h3>
+    <div class="vh-flex-start-container">
+        <div class="flex-item" style="height: 90px;">Mi div 1</div>
+        <div class="flex-item" style="height: 80px;">Mi div 2</div>
+        <div class="flex-item" style="height: 50px;">Mi div 3</div>
+        <div class="flex-item" style="height: 30px;">Mi div 4</div>
+        <div class="flex-item" style="height: 10px;">Mi div 5</div>
+    </div>
+    <h3>center y center</h3>
+    <div class="vh-center-container">
+        <div class="flex-item" style="height: 20px;"><p>Mi div 1</p></div>
+        <div class="flex-item" style="height: 30px;"><p>Mi div 2</p></div>
+        <div id="miId" class="flex-item" style="height: 50px;"><p>Mi div 3</p></div>
+        <div class="flex-item" style="height: 60px;"><p>Mi div 4</p></div>
+        <div class="flex-item" style="height: 70px;"><p>Mi div 5</p></div>
+    </div>
+    <h3>flex-end y baseline</h3>
+    <div class="vh-flex-end-container">
+        <div class="flex-item" style="height: 10px;">Mi div 1</div>
+        <div class="flex-item" style="height: 20px;">Mi div 2</div>
+        <div class="flex-item" style="height: 30px;">Mi div 3</div>
+        <div class="flex-item" style="height: 40px;">Mi div 4</div>
+        <div class="flex-item" style="height: 50px;">Mi div 5</div>
+    </div>
+    </section>
+
+    <section id="columnas">
+
+        <h2>Columnas</h2>
+        <h3>flex-start y center</h3>
+        <div class="col-flex-start-container">
+            <div class="flex-item">Mi div 1</div>
+            <div class="flex-item">Mi div 2</div>
+            <div class="flex-item">Mi div 3</div>
+            <div class="flex-item">Mi div 4</div>
+            <div class="flex-item">Mi div 5</div>
+        </div>
+        <h3>center y center</h3>
+        <div class="col-center-container">
+            <div class="flex-item">Mi div 1</div>
+            <div class="flex-item">Mi div 2</div>
+            <div class="flex-item">Mi div 3</div>
+            <div class="flex-item">Mi div 4</div>
+            <div class="flex-item">Mi div 5</div>
+        </div>
+        <h3>flex-end y baseline</h3>
+        <div class="col-flex-end-container">
+            <div class="flex-item"style="height: 9px; width:50px ;">Mi div 1</div>
+            <div class="flex-item"style="height: 8px; width: 60px;">Mi div 2</div>
+            <div class="flex-item"style="height: 7px; width: 70px;">Mi div 3</div>
+            <div class="flex-item"style="height: 6px; width: 80px;">Mi div 4</div>
+            <div class="flex-item"style="height: 5px; width: 90px;">Mi div 5</div>
+        </div>
+    </section>
+</body>
+</html>

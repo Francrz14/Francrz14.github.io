@@ -1,0 +1,144 @@
+/* Hoja de estilos para aplicar Flex box 
+*  Aplicamos esta hoja de estilos a contenido HTML de temas
+*/
+
+/* Setup  inicial de las cajas div en el container */
+body, html {
+    margin: 0;
+}
+body {
+    background-color:rgb(144, 221, 195);
+    padding: 10px;
+    font-family: 'Roboto', sans-serif;
+}
+body a, ul {
+    color: black;
+    /* color: rgb(228, 228, 228); */
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-decoration: none;
+}
+ul {
+    list-style-type:decimal-leading-zero;
+}
+
+/* clase genérica para los divs en containers */
+
+h1 {
+    text-align: center;
+    font-family: roboto;
+}
+h1, h2, h3 {
+    color: #3f2ac5;
+    /* color: rgb(104, 55, 55); */
+    font-family: roboto;
+}
+.etiqueta {
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-family: roboto;
+    width: 80vw;
+    margin: 0 auto 10px auto;
+    
+}
+
+.pre {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(186, 182, 182);
+    width: 90%;
+    margin: 10px auto;
+    padding: 10px;
+    
+
+}
+
+ pre code {
+    border: 0px solid black;
+    padding: 0 0 0 10px;
+    display: inline-block;
+
+}
+mark {
+    text-decoration: underline;
+}
+
+meter{
+    width: 50vw;
+    display: block;
+    height: 1.5em;
+}
+
+progress {
+    display: block;
+    width: 50vw;
+    height: 1.25em;
+}
+details summary {
+    padding: 10px;
+    border: 1px solid brown;
+    background-color: rgba(222, 184, 135, 0.825);
+    box-shadow: 2px 2px 2px rgb(0, 0, 0);
+    cursor:pointer;
+    width: 90%;
+    margin: 10px auto;
+} 
+details p {
+    background-color: rgb(224, 206, 184);
+    border: 1px solid brown;
+    border-top: 0;
+    padding: 10px;
+    margin: -10px auto 10px auto;
+    box-shadow: 2px 2px 2px rgb(6, 5, 4);
+    width: 90%;
+
+}
+dialog {
+    background-color: antiquewhite;
+    width: 50%;
+}
+
+#radio-btn {
+    border: 2px solid brown;
+    margin: 20px auto;
+    border-radius: 5px;
+    box-shadow: 0;
+}
+legend {
+    font-weight: 600;
+    text-decoration: underline;
+    margin: 0 10px;
+    padding: 0 10px;
+}
+#radio-btn label, #checkboxes label {
+    display: inline-block;
+    border: 1px solid brown;
+    min-width: 50vw;
+    width: 70vw;
+    margin: 10px 0;
+}
+#radio-btn input, #checkboxes input {
+    display: inline-block;
+    width: 5vw;
+    margin-right: 0;
+    margin-left: auto;
+}
+
+/* Estos estilos no son 100% compatibles entre navegadores */
+select optgroup {
+    background-color: white;
+    font-weight: 600;
+    opacity: 1;
+    color: black;
+}
+
+/* Iconos de Google */
+.material-symbols-outlined {
+    display: inline-block; 
+    padding: 10px; 
+    border: 0px solid black; 
+    height: auto; 
+    align-self: flex-start;
+    cursor: pointer;
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="style.css">
+    <title>Conversor de Fracciones a Números Decimales</title>
+</head>
+<body>
+    <h1><b>Conversor de Fracciones a Números Decimales</b></h1>
+    <main>
+        <div id="conversor-container">
+            <p><b>Prueba a convertir fracciones como <code>1 / 2</code>, <code>2 / 3</code>, etc.</b></p>
+            <!--<p><b>Descripción 2</b></p>-->
+            <div id="resultados-wrapper">
+                <label for="resultados"><b>Fracción en representación decimal:</b></label>
+                <div id="resultados-div">
+                    <p id="resultados"></p>
+                </div>
+                <label for="decimales"><b>Elije el número de decimales para el resultado:</b></label>
+                <select id="decimales">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3" selected>3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                </select>
+
+                <label for="myInputA"><b>Introduce los valores de la fracción:</b></label>
+                <input id="myInputA" type="number"  placeholder="1">
+                <hr>
+                <input id="myInputB" type="number"  placeholder="2">
+                <button id="borrar-btn" onclick="borrar()">
+                    <span class="material-symbols-outlined">
+                        delete
+                    </span>
+                    <span id="borrar-span">Borrar</span>
+                </button>  
+                <button id="conversor-btn" onclick="convertir()">Convertir fracción</button> 
+            </div>
+        </div>
+    </main>
+    <script src="fraccion-a-decimal.js"></script>
+</body>
+</html>

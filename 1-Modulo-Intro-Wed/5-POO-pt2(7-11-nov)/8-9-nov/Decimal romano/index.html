@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Convertidor Números Decimales a Romanos</title>
+</head>
+<body>
+    <h1><b>Convertidor Números Decimales a Romanos</b></h1>
+    <main>
+        <div id="conversor-container">
+            <p><b>Para comprobar las salidas ingresa <code>100</code>, <code>900</code>, <code>2022</code> y <code>121</code>.</b></p>
+            <p><b>Este conversior solo admite números del <code>1</code> al <code>3999</code></b></p>
+            <div id="resultados-wrapper">
+                <label for="resultados"><b>Número en representación romana:</b></label>
+                <div id="resultados-div">
+                    <p id="resultados"></p>
+                </div>
+
+                <label for="myInputA"><b>Introduce el número en base 10 a convertir:</b></label>
+                <input id="myInputA" type="number"  placeholder="1">
+
+
+                <button id="conversor-btn" onclick="convertir()">Convertir</button>  
+            </div>
+        </div>
+    </main>
+    <script src="decimal-a-romano.js"></script>
+</body>
+</html>
