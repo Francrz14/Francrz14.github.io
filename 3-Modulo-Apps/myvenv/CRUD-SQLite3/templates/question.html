@@ -1,0 +1,13 @@
+<!-- question.html -->
+
+{% extends 'base.html' %}
+{% block main %}
+
+    <h2> {{ question }} </h2>
+
+    <form method='post'>
+        <b>Respuesta</b> <input type="text" name="answer"><br>
+        <input type="submit" name="submit" value="Enviar">
+        <input type="reset" name="reset" value="Borrar"><br>
+    </form>
+{% endblock %}

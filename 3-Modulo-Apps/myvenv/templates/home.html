@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block home %}
+<section id="home">
+
+    <div class="d-flex text-center px-3 align-items-center justify-content-center">
+        <div class="col-5 d-inline-block py-5">
+            <div class="row px-7 align-items-center">
+                <img class="d-inline-block" 
+                src="{{ url_for('static', filename='img/logos/logo500x500-sin-letras.png') }}" 
+                width="125"
+                alt="logo">
+                <div class="ml-3">
+                    <h1 class="logo" >Notas</h1>
+                    <h2 class="upper" >Todo App</h2>
+                </div>
+            </div>
+            <div class="row my-5 fs-2 text-white text-center justify-content-center">
+                <p>Escribe lo que tienes que hacer
+                    para no olvidarlo</p>
+            </div>
+            <div class="row my-3">
+                <a class="btn mx-auto boton rounded-pill w-40" href="#about">Empezar</a>
+            </div>
+    
+        </div>
+    
+        <div class="col-5 d-inline-flex py-3 px-0 justify-content-end">
+            <div class="col-6 post-it bg-amarillo-primario py-5 px-5">
+                <h3 class="upper">Lista de la compra:</h3>
+                <ul style="padding-left: 0; list-style-type: none;">
+                    <li>Café</li>
+                    <li>Café</li>
+                    <li>Café</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="triangulo"></div>
+</section>
+
+{% include 'about.html' %}
+
+{% include 'what_you_can_do.html' %}
+
+{% endblock %}
+
