@@ -1,0 +1,16 @@
+{% extends "master.html" %}
+
+{% block title %}
+{% if my_member.id %} {{ my_member.firstname }} {{ my_member.lastname }} {% endif %}
+{% endblock %}
+
+{% block content %}
+
+<h1>{{ my_member.firstname }} {{ my_member.lastname }}</h1>
+  
+{% if my_member.phone %}<p>Teléfono: {{ my_member.phone }}</p>{% endif %}
+{% if my_member.joined_date %}<p>Member since: {{ my_member.joined_date }}</p>{% endif %}
+
+<p>Volver a <a href="/members">Miembros</a></p>
+
+{% endblock %}
