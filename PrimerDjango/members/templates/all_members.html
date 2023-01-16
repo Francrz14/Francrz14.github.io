@@ -6,8 +6,25 @@ Todos los miembros
 
 {% block content %}
 
-<h1 style="text-align: center;">All Members</h1>
-  
+<div class="mycard">
+  <h1>Members</h1>
+  <ul class="mb-5">
+    {% for member in my_members %}
+    
+    {% comment "Este botón nos lleva a details/1" %}   
+      <li onclick="window.location = 'details/{{ member.id }}'">{{ member.firstname }} {{ member.lastname }}</li>
+    {% endcomment %}
+    
+    {# "Este botón lleva a /details/nombre-apellido" #}
+    <li onclick="window.location = 'details/{{ member.slug }}'">{{ member.firstname }} {{ member.lastname }}</li>
+
+    {% endfor %}
+  </ul>
+</div>
+
+{% comment %}
+<h1 style="text-align: center;">Miembros</h1>
+
   {% for member in my_members %}
 <div style="text-align: center; border-top: 1px solid black;">
 <h2>Miembro - #{{ member.id }}</h2>
@@ -17,6 +34,6 @@ Todos los miembros
     {% if member.joined_date %}<li>Fecha de alta: {{ member.joined_date }}</li>{% endif %}
 </ul>
 </div>
-  {% endfor %}
+{% endcomment %}
 
 {% endblock %}
