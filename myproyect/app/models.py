@@ -1,17 +1,23 @@
 import datetime
-
 from django.db import models
 from django.utils import timezone
+from django.contrib import admin
 
 class Question(models.Model):
     question_text = models.CharField(max_length=200)
     pub_date = models.DateTimeField('date published')
+    
+    @admin.display(
+        boolean=True,
+        ordering='pub_date',
+        description='Pasadas 24H?',
+    ) 
+    
+    def was_published_recently(self):
+        now = timezone.now()
+        return now - datetime.timedelta(days=1) <= self.pub_date <= now
     def __str__(self):
         return self.question_text
-    def was_published_recently(self):
-        return self.pub_date >= timezone.now() - datetime.timedelta(days=1)
-    
-
 
 class Choice(models.Model):
     question = models.ForeignKey(Question, on_delete=models.CASCADE)
@@ -19,3 +25,15 @@ class Choice(models.Model):
     votes = models.IntegerField(default=0)
     def __str__(self):
         return self.choice_text
+    
+class User(models.Model):
+    username = models.CharField(max_length=50)
+    password = models.CharField(max_length=50)
+    firstname = models.CharField(max_length=50)
+    lastname = models.CharField(max_length=50)
+    email = models.CharField(max_length=50)
+    address = models.CharField(max_length=200)
+    phone = models.CharField(max_length=20)
+    
+    def __str__(self):
+        return f"{self.lastname}, {self.firstname}"

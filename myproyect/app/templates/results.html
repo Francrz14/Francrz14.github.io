@@ -1,0 +1,15 @@
+{% extends "index.html"%}
+{% block content %}
+
+<h1 class="container">{{ question.question_text }}</h1>
+<hr>
+<ul style="text-align: center; font-size: 1.75rem;">
+{% for choice in question.choice_set.all %}
+    <li>{{ choice.choice_text }} -- votos: {{ choice.votes }} voto{{ choice.votes|pluralize }}</li>
+{% endfor %}
+</ul>
+<br>
+<a style="display: flex; justify-content: center;" href="{% url 'app:detail' question.id %}">Votar de nuevo?</a>
+{% endblock %}
+
+

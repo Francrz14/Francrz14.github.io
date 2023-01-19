@@ -1,0 +1,29 @@
+body {
+    background:darkgray url("images/pic.jpg") no-repeat fixed bottom;
+}
+
+li a {
+    color: green;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    font-size: 2rem;  
+}
+
+.Vote {
+    margin: 0 auto;
+    text-align: center;
+    
+}
+
+.bluebotton{
+    background-color: #4f4fae;
+}
+ ul {
+    list-style-type: none;
+    
+    
+ }

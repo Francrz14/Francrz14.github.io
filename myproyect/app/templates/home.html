@@ -1,0 +1,21 @@
+
+{% extends "index.html" %}
+{% block content %}
+
+<h1 class="container">Test de mi primer proyecto</h1>
+<br>
+<br>
+{% if latest_question_list %}
+    
+    <div style="text-align: center; font-size: 1.2rem;">
+        <ul style= "list-style-type: none;">   
+        {% for question in latest_question_list %}
+        <li>{{question.id}} - <a href="{% url 'app:detail' question.id %}">{{ question.question_text }}</a></li>
+        {% endfor %}
+        </ul>
+    </div>
+{% else %}
+    <hr>
+    <p style="text-align: center;">No hay encuestas disponibles.</p>
+{% endif %}
+{% endblock %}

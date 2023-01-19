@@ -1,31 +1,51 @@
-from django.http import Http404
-from django.http import HttpResponse
-from django.template import loader
-from django.shortcuts import render
-from .models import Question
+from django.http import HttpResponseRedirect
+from django.shortcuts import get_object_or_404, render
+from django.urls import reverse
+from django.views import generic
+from django.utils import timezone
 
-def index(request):
-    latest_question_list = Question.objects.order_by('-pub_date')[:5]
-    template = loader.get_template("index.html")
-    context = {
-        'latest_question_list': latest_question_list,
-    }
-    return HttpResponse(template.render(context, request,))
+from .models import Choice, Question
 
-def test(request):
-    return HttpResponse("Ësto es un test")
 
-def detail(request, question_id):
-    try:
-        question = Question.objects.get(pk=question_id)
-    except Question.DoesNotExist:
-        raise Http404("Question does not exist")    
-    return render(request, 'app/detail.html', {'question': question})   
-    #return HttpResponse("Estás viendo la pregunta %s." % question_id)
+class IndexView(generic.ListView):
+    template_name = 'home.html'
+    context_object_name = 'latest_question_list'
 
-def results(request, question_id):
-    response = "Estás viendo los resultados de la pregunta %s."
-    return HttpResponse(response % question_id)
+    def get_queryset(self):
+        """Devuelva las cinco últimas preguntas publicadas."""
+        return Question.objects.filter(pub_date__lte=timezone.now()).order_by('-pub_date')[:5]
+
+
+class DetailView(generic.DetailView):
+    model = Question
+    template_name = 'detail.html'
+    def get_queryset(self):
+        """
+        Excluye las preguntas que aún no se han publicado.
+        """
+        return Question.objects.filter(pub_date__lte=timezone.now())
+
+
+class ResultsView(generic.DetailView):
+    model = Question
+    template_name = 'results.html'
+
 
 def vote(request, question_id):
-    return HttpResponse("Va a votar sobre la pregunta %s." % question_id)
+    question = get_object_or_404(Question, pk=question_id)
+    try:
+        selected_choice = question.choice_set.get(pk=request.POST['choice'])
+    except (KeyError, Choice.DoesNotExist):
+        # Vuelve a mostrar el formulario de votación de preguntas.
+        return render(request, 'detail.html', {
+            'question': question,
+            'error_message': "No seleccionaste una opción.",
+        })
+    else:
+        selected_choice.votes += 1
+        selected_choice.save()
+        # Siempre devuelve un HttpResponseRedirect después de tratar con éxito
+        # con datos POST. Esto evita que los datos se publiquen dos veces si un
+        # usuario pulsa el botón Atrás.
+        return HttpResponseRedirect(reverse('app:results', args=(question.id,)))   
+    #return HttpResponse("Va a votar sobre la pregunta %s." % question_id)
